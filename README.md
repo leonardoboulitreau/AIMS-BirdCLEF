@@ -1,4 +1,4 @@
-# AIMS-BirdCLEF
+# AIMS-BirdCLEF 🦫
 
 ## How to Download Data
 
