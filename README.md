@@ -3,6 +3,7 @@
 ## How to Download Data
 
 Antes de tudo, tem que ter a token kaggle: Kaggle.com -> Settings -> API -> Create Token -> Download 
+
 Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
 
 Depois, rode o script para baixar o dataset desejado da seguinte maneira.
