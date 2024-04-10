@@ -1,10 +1,10 @@
 # AIMS-BirdCLEF 🐦
 
-## How to Use Repo on RECOD
+## Repo Location on RECOD
 ```
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
-### If you need to pull or push or even clone this repo on RECOD
+### If you need to pull, push or even clone this repo on RECOD
 Copy the private repo key to your user folder and change its permissions.
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
@@ -34,7 +34,7 @@ cd /the/folder/where/you/wanna/clone/
 git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
 git pull
 ```
-Do your work
+or push
 ```
 git add .
 git commit -m 'commit message'
@@ -53,5 +53,17 @@ Depois, rode o script para baixar o dataset desejado da seguinte maneira.
 ```
 
 O script já colocará tudo nos lugares corretos e removerá o .zip após extrair.
+
+## How to Work
+
+First build the image (already done on DL-08)
+```
+sh build_image.sh
+```
+Enter a container on GPU G, port PPPP, and with container name birdclef_container_N by running:
+```
+sh birdclef_container.sh -g G -p 'PPPP:PPPP' -n N
+```
+Work!
 
 
