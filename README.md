@@ -10,7 +10,7 @@
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
 
-## - How to Work <a name="work"></a>
+## How to Work <a name="work"></a>
 First build the image (already done on DL-08) (Assumes CUDA 11.0. If different, change base image, and torch versions to match.)
 ```
 sh build_image.sh
@@ -21,7 +21,7 @@ sh birdclef_container.sh -g G -p 'PPPP:PPPP' -n N
 ```
 Work!
 
-## - Warning! If you need to pull, push or even clone this repo on RECOD <a name="pull"></a>
+## How to pull, push or even clone this repo on RECOD <a name="pull"></a>
 Copy the private repo key to your user folder and change its permissions.
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
@@ -58,7 +58,7 @@ git commit -m 'commit message'
 git push
 ```
 
-## - How to Download Data <a name="download"></a>
+## How to Download Data <a name="download"></a>
 
 Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
 
