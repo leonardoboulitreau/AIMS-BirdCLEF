@@ -22,7 +22,13 @@ Host github.com
   IdentityFile ~/.ssh/birdclef
 ```
 Ctrl X + y + Enter to leave the editor and save.
-Continue...
+
+Either pull 
+```
+cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+git pull
+```
+or clone wherever you want
 ```
 cd /the/folder/where/you/wanna/clone/
 git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
