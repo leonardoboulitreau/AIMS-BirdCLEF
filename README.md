@@ -8,6 +8,8 @@ cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
+chmod 600 /home/RECOD.USER/.ssh/birdclef  #  substituing RECOD.USER with you recod user
+
 ```
 
 ```
