@@ -1,5 +1,10 @@
 # AIMS-BirdCLEF 🐦
 
+## How to Use Repo on RECOD
+```
+cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+```
+
 ## How to Download Data
 
 Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
