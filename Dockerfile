@@ -15,3 +15,4 @@ RUN apt install python-is-python3
 RUN apt-get install unzip
 RUN python -m pip install ipykernel
 RUN python -m ipykernel install --user
+RUN git config --global --add safe.directory /workspace/aimsbirdclef
