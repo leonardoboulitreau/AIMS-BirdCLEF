@@ -1,7 +1,7 @@
 # AIMS-BirdCLEF 🐦
 
 1. [RECOD Repo Location](#repolocation)
-2. [How to Work](#work)
+2. [How to Work on RECOD](#work)
 3. [How to Pull, Clone or Push on RECOD](#pull)
 4. [How to Download Data of All BirdCLEFs](#download)
 
@@ -11,7 +11,7 @@ Prioritize using it here! To avoid using too much space!
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
 
-## How to Work <a name="work"></a>
+## How to Work on RECOD <a name="work"></a>
 First build the image (already done on DL-08) (Assumes CUDA 11.0. If different, change base image, and torch versions to match.)
 ```
 sh build_image.sh
