@@ -56,7 +56,7 @@ O script já colocará tudo nos lugares corretos e removerá o .zip após extrai
 
 ## How to Work
 
-First build the image (already done on DL-08)
+First build the image (already done on DL-08). Assumes CUDA 11.0. If different, change base image, and torch versions to match.
 ```
 sh build_image.sh
 ```
