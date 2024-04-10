@@ -65,17 +65,17 @@ Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API ->
 
 Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
 
-Entre no container, seção [How to Work](#work).
+Entre no container, seção [How to Work](#work). Depois, execute:
 
-Depois, rode o script para baixar o dataset desejado da seguinte maneira.
-
+### Se estiver no RECOD
 ```
  cd /workspace/aimsbirdclef
+ sh input/birdclef-2024/download_birdclef2024.sh /workspace/kaggle-token-leo/
+```
+
+### Se estiver no seu PC
+```
  sh input/birdclef-XXXX/download_birdclefXXXX /path/to/the/FOLDER/in/which/kaggle.json/is/located/
 ```
 
 O script já colocará tudo nos lugares corretos e removerá o .zip após extrair.
-
-
-
-
