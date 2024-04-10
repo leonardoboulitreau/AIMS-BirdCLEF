@@ -21,7 +21,7 @@ Host github.com
   User git
   IdentityFile ~/.ssh/birdclef
 ```
-Ctrl X + y + Enter to leave the editor and save.
+Ctrl X then y then Enter to leave the editor and save.
 
 Either pull 
 ```
