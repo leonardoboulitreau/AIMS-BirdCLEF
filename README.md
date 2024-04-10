@@ -2,7 +2,7 @@
 
 1. [RECOD Repo Location](#repolocation)
 2. [How to Work on RECOD](#work)
-3. [How to Pull, Clone or Push on RECOD](#pull)
+3. [How to Pull, Push, or Clone on RECOD](#pull)
 4. [How to Download Data of All BirdCLEFs](#download)
 
 ## Repo Location on RECOD <a name="repolocation"></a>
@@ -22,7 +22,7 @@ sh birdclef_container.sh -g G -p 'PPPP:PPPP' -n N
 ```
 Work!
 
-## How to pull, push or even clone this repo on RECOD <a name="pull"></a>
+## How to pull, push or clone this repo on RECOD <a name="pull"></a>
 Copy the private repo key to your user folder and change its permissions.
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
