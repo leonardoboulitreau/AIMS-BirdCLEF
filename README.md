@@ -3,7 +3,7 @@
 1. [RECOD Repo Location](#repolocation)
 2. [How to Work](#work)
 3. [How to Pull, Clone or Push on RECOD](#pull)
-4. [How to Download Data of All BirdCLEFS](#download)
+4. [How to Download Data of All BirdCLEFs](#download)
 
 ## Repo Location on RECOD <a name="repolocation"></a>
 Prioritize using it here! To avoid using too much space!
