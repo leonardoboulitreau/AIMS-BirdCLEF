@@ -4,9 +4,9 @@
 ```
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
-## How to clone, pull or push on RECOD substituing RECOD.USER with you recod user
+## How to clone, pull or push on RECOD
 ```
-cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/
+cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
 cd /the/folder/you/wanna/clone/
 git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
 git pull
