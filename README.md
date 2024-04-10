@@ -6,6 +6,7 @@
 4. [How to Download Data of All BirdCLEFS](#download)
 
 ## Repo Location on RECOD <a name="repolocation"></a>
+Prioritize using it here! To avoid using too much space!
 ```
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
