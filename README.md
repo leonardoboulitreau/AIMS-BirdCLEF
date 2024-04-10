@@ -4,22 +4,7 @@
 ```
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
-
-## How to Download Data
-
-Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
-
-Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
-
-Depois, rode o script para baixar o dataset desejado da seguinte maneira.
-
-```
- sh input/birdclef-XXXX/download_birdclefXXXX /path/to/the/FOLDER/in/which/kaggle.json/is/located/
-```
-
-O script já colocará tudo nos lugares corretos e removerá o .zip após extrair.
-
-## If Needed, this is How to clone, pull or push this repo on RECOD
+### If you need to pull or push or even clone this repo on RECOD
 Copy the private repo key to your user folder and change its permissions.
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
@@ -49,3 +34,18 @@ git add .
 git commit -m 'commit message'
 git push
 ```
+## How to Download Data
+
+Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
+
+Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
+
+Depois, rode o script para baixar o dataset desejado da seguinte maneira.
+
+```
+ sh input/birdclef-XXXX/download_birdclefXXXX /path/to/the/FOLDER/in/which/kaggle.json/is/located/
+```
+
+O script já colocará tudo nos lugares corretos e removerá o .zip após extrair.
+
+
