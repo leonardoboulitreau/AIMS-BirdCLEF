@@ -14,7 +14,6 @@ git pull
 git add .
 git commit -m 'commit message'
 git push
-
 ```
 ## How to Download Data
 
