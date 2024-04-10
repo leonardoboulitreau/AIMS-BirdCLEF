@@ -4,7 +4,18 @@
 ```
 cd /work/leonardo.boulitreau/AIMS-BirdCLEF
 ```
+## How to clone, pull or push on RECOD substituing RECOD.USER with you recod user
+```
+cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/
+cd /the/folder/you/wanna/clone/
+git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
+git pull
+# do your work
+git add .
+git commit -m 'commit message'
+git push
 
+```
 ## How to Download Data
 
 Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
