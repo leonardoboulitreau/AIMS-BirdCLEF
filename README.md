@@ -43,12 +43,12 @@ Ctrl X then y then Enter to leave the editor and save.
 
 Either pull 
 ```
-cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+cd /work/RECOD.USER/AIMS-BirdCLEF
 git pull
 ```
 or clone wherever you want
 ```
-cd /the/folder/where/you/wanna/clone/
+cd /work/RECOD.USER/
 git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
 git pull
 ```
