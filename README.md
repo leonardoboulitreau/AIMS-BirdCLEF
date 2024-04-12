@@ -6,9 +6,9 @@
 4. [How to Download Data of All BirdCLEFs](#download)
 
 ## Repo Location on RECOD <a name="repolocation"></a>
-Prioritize using it here! To avoid using too much space!
+Clone your repos on:
 ```
-cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+cd /work/RECOD.USER/AIMS-BirdCLEF
 ```
 
 ## How to Work on RECOD <a name="work"></a>
