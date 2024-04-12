@@ -8,4 +8,4 @@ do
 done
 echo "Running container birdclef_container_$number on gpu $gpu and port $port";
 
-docker run --rm -it --gpus device=$gpu --userns=host --shm-size 64G -v /work/leonardo.boulitreau/AIMS-BirdCLEF:/workspace/aimsbirdclef/ -p $port --name birdclef_container_$number aims-birdclef:latest /bin/bash
+docker run --rm -it --gpus device=$gpu --userns=host --shm-size 64G -v /work/leonardo.boulitreau/kaggle-token-leo/:/workspace/kaggle-token-leo/ -v /work/leonardo.boulitreau/AIMS-BirdCLEF:/workspace/aimsbirdclef/ -p $port --name birdclef_container_$number aims-birdclef:latest /bin/bash
