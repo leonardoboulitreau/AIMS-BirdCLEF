@@ -61,9 +61,6 @@ git push
 
 ## How to Download Data <a name="download"></a>
 
-Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
-
-Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
 
 Entre no container, seção [How to Work](#work). Depois, execute:
 
@@ -74,6 +71,11 @@ Entre no container, seção [How to Work](#work). Depois, execute:
 ```
 
 ### Se estiver no seu PC
+
+Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
+
+Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
+
 ```
  sh input/birdclef-XXXX/download_birdclefXXXX /path/to/the/FOLDER/in/which/kaggle.json/is/located/
 ```
