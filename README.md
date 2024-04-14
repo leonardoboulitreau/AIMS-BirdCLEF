@@ -6,9 +6,9 @@
 4. [How to Download Data of All BirdCLEFs](#download)
 
 ## Repo Location on RECOD <a name="repolocation"></a>
-Prioritize using it here! To avoid using too much space!
+Clone your repos on:
 ```
-cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+cd /work/RECOD.USER/AIMS-BirdCLEF
 ```
 
 ## How to Work on RECOD <a name="work"></a>
@@ -43,12 +43,12 @@ Ctrl X then y then Enter to leave the editor and save.
 
 Either pull 
 ```
-cd /work/leonardo.boulitreau/AIMS-BirdCLEF
+cd /work/RECOD.USER/AIMS-BirdCLEF
 git pull
 ```
 or clone wherever you want
 ```
-cd /the/folder/where/you/wanna/clone/
+cd /work/RECOD.USER/
 git clone git@github.com:leonardoboulitreau/AIMS-BirdCLEF.git    # Everytime it demands, on pull or push, the password is: tucano
 git pull
 ```
@@ -61,9 +61,6 @@ git push
 
 ## How to Download Data <a name="download"></a>
 
-Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
-
-Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
 
 Entre no container, seção [How to Work](#work). Depois, execute:
 
@@ -74,6 +71,11 @@ Entre no container, seção [How to Work](#work). Depois, execute:
 ```
 
 ### Se estiver no seu PC
+
+Antes de tudo, tem que ter a token kaggle.json: Kaggle.com -> Settings -> API -> Create Token -> Download 
+
+Além disso, para baixar versões anteriores você tem que aceitar as regras da competição: Kaggle.com -> Competitions -> BirdCLEFXXXX -> Late Submission -> Accept the Rules
+
 ```
  sh input/birdclef-XXXX/download_birdclefXXXX /path/to/the/FOLDER/in/which/kaggle.json/is/located/
 ```
