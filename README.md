@@ -23,7 +23,9 @@ sh birdclef_container.sh -g G -p 'PPPP:PPPP' -n N
 Work!
 
 ## How to pull, push or clone this repo on RECOD <a name="pull"></a>
-Copy the private repo key to your user folder and change its permissions.
+This should all be done OUTSIDE containers.
+
+First, copy the private repo key to your user folder and change its permissions.
 ```
 cp /work/leonardo.boulitreau/birdclef /home/RECOD.USER/.ssh/     #  substituing RECOD.USER with you recod user
 chmod 600 /home/RECOD.USER/.ssh/birdclef  #  substituing RECOD.USER with you recod user
