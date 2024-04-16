@@ -1,9 +1,21 @@
 # AIMS-BirdCLEF 🐦
 
-1. [RECOD Repo Location](#repolocation)
-2. [How to Work on RECOD](#work)
-3. [How to Pull, Push, or Clone on RECOD](#pull)
-4. [How to Download Data of All BirdCLEFs](#download)
+1. [How to Submit on Kaggle](#submitkaggle)
+2. [RECOD Repo Location](#repolocation)
+3. [How to Work on RECOD](#work)
+4. [How to Pull, Push, or Clone on RECOD](#pull)
+5. [How to Download Data of All BirdCLEFs](#download)
+
+## How to Submit Entry to Kaggle <a name="submitkaggle"></a>
+
+1. **Train your model**. The training notebook must export its checkpoint (on a .ckpt (or) .pth file) to a '../input/EXPERIMENT_NAME' folder. This has to be done since on Kaggle, the checkpoint MUST be read from the '../input/EXPERIMENT_NAME' dir. Don't worry, the .gitignore assures that nothing in the input folder will be uploaded to the repo.
+2. **Write an inference notebook**. It must read the checkpoint of the model, that must be on the '../input/EXPERIMENT_NAME/' folder, and iterate exactly through the '../input/birdclef-2024/test_soundscapes' folder, assuming there are files there and generate predicitions for them in chunks of 5 seconds in a './submission.csv' file. Each audio is 4min, then 48 chunks for file must exist. A good idea is to create an "if" statement that if the test_soundscapes is not empty, use it (for submitting), and if it is empty, take like, 10 samples from the unlabeled_soundscapes folder, so you can validate the predictions notebook BEFORE submitting to the challenge locally. **Any errors when submitting will count as a submission!!**
+3. **Download the inference notebook and checkpoint**.
+4. **Upload your checkpoint to Kaggle as a Kaggle dataset:** kaggle.com -> Datasets -> Browse Files -> Select .ckpt file ->  **Fill Dataset Title with EXPERIMENT_NAME** (This way, you'll be able to add it to the kaggle input folder later). 
+5. **Upload your notebook to Kaggle:** kaggle.com -> Competitions -> BirdCLEF2024 -> Code -> New Notebook -> File -> Import Notebook -> Browser Files -> Select Your Notebook -> Import -> OK
+6. **Add Your Kaggle Dataset with model checkpoint to input folder:** Input -> Add Input -> Search for your EXPERIMENT_NAME dataset -> Click on the + Symbol
+7. **Run All. Important to check that it works BEFORE submitting.**
+8. **Submit to Competition:** -> Submit -> Write a Comprehensible Version Name -> Submit!
 
 ## Repo Location on RECOD <a name="repolocation"></a>
 Clone your repos on:
