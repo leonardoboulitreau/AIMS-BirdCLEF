@@ -1,5 +1,7 @@
 input/*
 Lucas/chpks/*
+chpks/*
+Lucas/lightning_logs/*
 Leo/LeoFeatures/*
 Leo/LeoCheckpoints/*
 */lightning_logs/*
