@@ -1,8 +1,8 @@
 input/*
-Lucas/chpks/*
+*/chpks/*
 chpks/*
-Lucas/lightning_logs/*
-Leo/LeoFeatures/*
-Leo/LeoCheckpoints/*
+*/lightning_logs/*
+*/*Features/*
+*/*Checkpoints/*
 */lightning_logs/*
 */submission.csv
