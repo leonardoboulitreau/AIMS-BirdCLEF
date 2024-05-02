@@ -1,8 +1,7 @@
 input/*
-*/chpks/*
-chpks/*
-*/lightning_logs/*
-*/*Features/*
-*/*Checkpoints/*
-*/lightning_logs/*
+*chpks*
+*lightning_logs*
+*Features*
+*Checkpoints*
 */submission.csv
+
