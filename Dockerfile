@@ -14,5 +14,6 @@ RUN pip install notebook
 RUN apt install python-is-python3
 RUN apt-get install unzip
 RUN python -m pip install ipykernel
+RUN pip install torch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 pytorch_lightning==2.1 pandas librosa opencv-python matplotlib albumentations 
 RUN python -m ipykernel install --user
 RUN git config --global --add safe.directory /workspace/aimsbirdclef
