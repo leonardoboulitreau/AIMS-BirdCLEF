@@ -132,7 +132,7 @@ def locate_training_files(trainval_df, trainval_feat_path, features):
         row = trainval_df[trainval_df['filename'] == info]
         for coluna in cols.keys():
             if coluna == 'filename':
-                cols[coluna].append(fls.iloc[idx]['filename'])
+                cols[coluna].append(fls.iloc[idx]['filename'].split('.')[0])
                 continue
             if coluna == 'filepath':
                 cols[coluna].append(trainval_feat_path + '/' + features + '/' + fls.iloc[idx]['filename'])
