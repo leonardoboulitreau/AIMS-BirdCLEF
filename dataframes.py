@@ -4,6 +4,7 @@ import os
 import numpy as np
 from tqdm import tqdm
 from sklearn.model_selection import KFold, StratifiedKFold
+from dupes_config import dupes
 pd.options.mode.chained_assignment = None  # default='warn'
 
 def generate_dataframes(data_dict):
