@@ -29,6 +29,11 @@ def generate_dataframes(data_dict):
     # Reorder 
     metadata = metadata[['filename', 'primary_label', 'secondary_labels', 'target', 'filepath', 'Duration', 'rating']]
 
+    # Remove Duplicates
+    files_to_remove = [file_tuple[0] for file_tuple in dupes]
+    mask = metadata['filename'].map(lambda x: all(word not in x for word in files_to_remove))
+    metadata = metadata[mask]
+
     ################
     ### HOLDOUT ####
     ################
