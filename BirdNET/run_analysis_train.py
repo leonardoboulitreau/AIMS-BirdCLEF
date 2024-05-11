@@ -52,7 +52,7 @@ for root, dirs, files in sorted(os.walk(audio_dir_train)):
                          '--i', file_path,
                            '--o', embeddings_output_path,
                              "--threads", "50",
-                               "--overlap", "3.0"],
+                               "--overlap", "2.0"],
                                  check=True)
 
         # Read the embeddings output to get the third column
@@ -79,8 +79,3 @@ for root, dirs, files in sorted(os.walk(audio_dir_train)):
             print(f"Failed to read {result_file_path}: {e}")
 
 print("Analysis complete. All results have been incrementally saved.")
-
-
-
-
-
