@@ -37,11 +37,22 @@ for root, dirs, files in sorted(os.walk(audio_dir_unlabeled)):
         print(f"Analyzing: {file_path}")
 
         # Run the analysis
-        subprocess.run(['python', analyze_path, '--i', file_path, '--o', output_dir, '--slist', species_dir, "--min_conf", "0.3", "--threads", "50"], check=True)
+        subprocess.run(['python', analyze_path,
+                         '--i', file_path,
+                           '--o', output_dir,
+                             '--slist', species_dir,
+                               "--min_conf", "0.3",
+                                 "--threads", "50",
+                                    "--overlap", "2.0"],
+                                   check=True)
 
         # Generate embeddings
         embeddings_output_path = os.path.join(embedding_out_dir, os.path.splitext(file)[0] + '.embeddings_unlabeled.txt')
-        subprocess.run(['python', embedding_path, '--i', file_path, '--o', embeddings_output_path, "--threads", "50"], check=True)
+        subprocess.run(['python', embedding_path,
+                         '--i', file_path,
+                           '--o', embeddings_output_path,
+                             "--threads", "50",
+                                "--overlap", "2.0"], check=True)
 
         # Read the embeddings output to get the third column
         try:
@@ -67,8 +78,3 @@ for root, dirs, files in sorted(os.walk(audio_dir_unlabeled)):
             print(f"Failed to read {result_file_path}: {e}")
 
 print("Analysis complete. All results have been incrementally saved.")
-
-
-
-
-
