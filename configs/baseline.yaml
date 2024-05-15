@@ -1,5 +1,5 @@
 # General Configuration
-output_folder: input/baseline2
+output_folder: input/baseline
 device: cuda
 seed: 1917                        # Random seed for reproducibility
 mixed_precision: false            # Whether to use mixed precision training
@@ -12,22 +12,22 @@ data_args:
   # HOLDOUT
   holdout_args:
     use_holdout: true                                                         # Whether to use a holdout set
-    load_holdout: true                                                        # Whether to load an existing holdout set
+    load_holdout: fals                                                        # Whether to load an existing holdout set
     loading_holdout_path: input/baseline/holdout_61bottom_7.5%_ratleq5_.csv   # Path to the holdout set file, if loading
     k: 61                                                                     # TOP k bottom underrepresented species for holdout
     percent: 0.075                                                            # Percentage of data of these k species to use for holdout
-    rating_leq_than: 5                                                        # Filter all obtained files based on rating less than or equal to this value
+    rating_leq_than: 4                                                        # Filter all obtained files based on rating less than or equal to this value
   
   # TRAIN-VAL SPLITS
   trainval_split_args:
     type: groupstratifiedkfold                                                # Type of split, can be [kfold, groupkfold, stratifiedkfold, groupstratifiedkfold]
-    n_folds: 2                                                                # Number of folds
+    n_folds: 5                                                                # Number of folds
     shuffle: true                                                             # Whether to shuffle data before splitting
     seed: 1917                                                                # Seed for shuffling
 
 # PREPROCESSING
 preprocess_train_args:
-  run_preprocess: false                                                       # Whether to run preprocessing
+  run_preprocess: true                                                        # Whether to run preprocessing
   loading_trainval_feats_path: input/baseline/trainval_feats                  # Path to load preprocessed features, if loading
   output_feature_types:                                                       # Types of features to output
     - audio
@@ -57,7 +57,7 @@ training_args:
   batch_size: 32          # Batch size for training
   val_batch_size: 64      # Batch size for validation
   n_workers: 4            # Number of workers for data loading
-  epochs: 1               # Number of training epochs
+  epochs: 7               # Number of training epochs
   lr: 0.001               # Learning rate
   optimizer: adam         # Optimizer type
   scheduler: cosine       # Learning rate scheduler
