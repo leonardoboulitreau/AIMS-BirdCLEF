@@ -5,6 +5,7 @@ import os
 from scipy import signal as sci_signal
 import cv2
 import math
+import pandas as pd
 
 def preprocess_train(trainval_df, preprocess_train_args, output_folder):
     print('> Running Preprocessing of Train Files')
@@ -65,20 +66,32 @@ def preprocess_train(trainval_df, preprocess_train_args, output_folder):
 
 def generate_audio_windows(path, preprocess_train_args):
     audio_data, sr = librosa.load(path, sr=preprocess_train_args['sampling_rate'])
-    
+    win_dur = preprocess_train_args['window_dur']
     file_windows = []
-    if preprocess_train_args['audio_window'] == 'center':
-        n_copy = math.ceil(5 * sr / len(audio_data))
+    if 'center' in preprocess_train_args['audio_window']:
+        n_copy = math.ceil(win_dur * sr / len(audio_data))
         if n_copy > 1: audio_data = np.concatenate([audio_data]*n_copy)
         start_idx = int(len(audio_data) / 2 - 2.5 * sr)
-        end_idx = int(start_idx + 5.0 * sr)
+        end_idx = int(start_idx + win_dur * sr)
         audio_data = audio_data[start_idx:end_idx]
         file_windows.append(audio_data)
-    elif preprocess_train_args['audio_window'] == 'slicing':
+    if 'left' in preprocess_train_args['audio_window']:
+        n_copy = math.ceil(win_dur * sr / len(audio_data))
+        if n_copy > 1: audio_data = np.concatenate([audio_data]*n_copy)
+        start_idx = 0
+        end_idx = int(start_idx + win_dur * sr)
+        audio_data = audio_data[start_idx:end_idx]
+        file_windows.append(audio_data)
+    if 'right' in preprocess_train_args['audio_window']:
+        n_copy = math.ceil(win_dur * sr / len(audio_data))
+        if n_copy > 1: audio_data = np.concatenate([audio_data]*n_copy)
+        start_idx = int(len(audio_data) - win_dur * sr)
+        end_idx = int(start_idx + win_dur * sr)
+        audio_data = audio_data[start_idx:end_idx]
+        file_windows.append(audio_data)
+    if 'slicing' in preprocess_train_args['audio_window']:
         raise NotImplementedError
-    else:
-        raise NotImplementedError
-
+    
     return file_windows
 
 def process_audio_windows(audio_windows, preprocess_train_args):

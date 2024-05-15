@@ -1,0 +1,64 @@
+# General Configuration
+output_folder: input/baseline2
+device: cuda
+seed: 1917                        # Random seed for reproducibility
+mixed_precision: false            # Whether to use mixed precision training
+save_example_batch: true          # Whether to save an example batch
+
+# DATA
+data_args:
+  metadata_path: input/birdclef-2024/train_metadata.csv  # Path to the metadata CSV file
+  
+  # HOLDOUT
+  holdout_args:
+    use_holdout: true                                                         # Whether to use a holdout set
+    load_holdout: true                                                        # Whether to load an existing holdout set
+    loading_holdout_path: input/baseline/holdout_61bottom_7.5%_ratleq5_.csv   # Path to the holdout set file, if loading
+    k: 61                                                                     # TOP k bottom underrepresented species for holdout
+    percent: 0.075                                                            # Percentage of data of these k species to use for holdout
+    rating_leq_than: 5                                                        # Filter all obtained files based on rating less than or equal to this value
+  
+  # TRAIN-VAL SPLITS
+  trainval_split_args:
+    type: groupstratifiedkfold                                                # Type of split, can be [kfold, groupkfold, stratifiedkfold, groupstratifiedkfold]
+    n_folds: 2                                                                # Number of folds
+    shuffle: true                                                             # Whether to shuffle data before splitting
+    seed: 1917                                                                # Seed for shuffling
+
+# PREPROCESSING
+preprocess_train_args:
+  run_preprocess: false                                                       # Whether to run preprocessing
+  loading_trainval_feats_path: input/baseline/trainval_feats                  # Path to load preprocessed features, if loading
+  output_feature_types:                                                       # Types of features to output
+    - audio
+    - spectrogram
+    - image
+  sampling_rate: 32000                # Audio sampling rate
+  audio_window:
+    - left                            # Window for audio processing (can be left, center, or sliding)
+  window_dur: 5                       # In seconds
+  spec_n_fft: 1095                    # FFT size for spectrogram
+  spec_win_len: 412                   # Window length for spectrogram
+  spec_hop_len: 100                   # Hop length for spectrogram
+  spec_win_type: hann                 # Window type for spectrogram
+  spec_cut_min_freq: 40               # Minimum frequency cut-off for spectrogram
+  spec_cut_max_freq: 15000            # Maximum frequency cut-off for spectrogram
+  img_size: 256                       # Image from spectrogram size 
+
+# MODEL
+model_args:
+  name: efficientnet  # Model name
+  type: b0            # Model type
+
+# TRAINING
+training_args:
+  input_feature: images   # Input feature type for the model
+  loss: ce                # Loss function
+  batch_size: 32          # Batch size for training
+  val_batch_size: 64      # Batch size for validation
+  n_workers: 4            # Number of workers for data loading
+  epochs: 1               # Number of training epochs
+  lr: 0.001               # Learning rate
+  optimizer: adam         # Optimizer type
+  scheduler: cosine       # Learning rate scheduler
+  weight_decay: 0.00001      # Weight decay for regularization
