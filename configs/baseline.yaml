@@ -12,7 +12,7 @@ data_args:
   # HOLDOUT
   holdout_args:
     use_holdout: true                                                         # Whether to use a holdout set
-    load_holdout: fals                                                        # Whether to load an existing holdout set
+    load_holdout: false                                                       # Whether to load an existing holdout set
     loading_holdout_path: input/baseline/holdout_61bottom_7.5%_ratleq5_.csv   # Path to the holdout set file, if loading
     k: 61                                                                     # TOP k bottom underrepresented species for holdout
     percent: 0.075                                                            # Percentage of data of these k species to use for holdout
